@@ -522,7 +522,7 @@ section {
       top: 0;
       bottom: 0;
       width: 60%;
-      min-heigth: 100%;
+      min-height: 100%;
       text-align: center;
       padding: 3.5rem 0 0 0; }
       section div.base_proj div.overlay_box p {
@@ -538,7 +538,7 @@ section {
       position: absolute;
       top: 0;
       bottom: 0;
-      min-heigth: 100%;
+      min-height: 100%;
       z-index: 11;
       width: 100%;
       box-shadow: 0 0 0 0 #fff;
