@@ -576,7 +576,7 @@ section {
       section div.base_proj div.zidx_move div.proj_btn {
         font-size: 1rem;
         letter-spacing: .3rem;
-        padding: .2rem;
+        /*padding:.2rem;*/
         color: #fff;
         background-color: #000;
         width: 40%;
@@ -585,6 +585,16 @@ section {
         top: 0;
         opacity: 0;
         cursor: pointer; }
+        section div.base_proj div.zidx_move div.proj_btn:hover {
+          width: 50%; }
+          section div.base_proj div.zidx_move div.proj_btn:hover .proj_link {
+            padding: .5rem; }
+        section div.base_proj div.zidx_move div.proj_btn .proj_link {
+          display: inline-block;
+          color: #fff;
+          padding: .2rem;
+          text-align: center;
+          text-decoration: none; }
   section div.see_more {
     color: #aaa;
     transition: color 0.5s;
@@ -795,10 +805,20 @@ nav.nav_container {
     margin: .8em auto; }
 
 /*classes to add and remove with javascript*/
-.slideInLeft {
-  animation: slideIn .8s ease-out; }
+/*
+____________________
+____________________
+____________________
+*/
+/*upon doc loaded, js will set opacity to 0 for elements that will animate in*/
+.jsOpacity {
+  opacity: 0; }
 
-@keyframes slideIn {
+/*animation class for elements that wil slide in from the left*/
+.slideInLeft {
+  animation: slideInLeft .8s ease-out; }
+
+@keyframes slideInLeft {
   0% {
     opacity: 0;
     border-bottom: none;
@@ -818,3 +838,49 @@ nav.nav_container {
     -ms-transform: translateX(0rem);
     transform: translateX(0rem);
     border-bottom: 4px solid #000; } }
+
+/*animation class for elements that will slide in from the right*/
+.slideInRight {
+  animation: slideInRight .8s ease-out; }
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    border-bottom: none;
+    -webkit-transform: translateX(-40rem);
+    -ms-transform: translateX(-40rem);
+    transform: translateX(-40rem); }
+  80% {
+    -webkit-transform: translateX(5rem);
+    -ms-transform: translateX(5rem);
+    transform: translateX(5rem);
+    border-bottom: none; }
+  94% {
+    border-bottom: none; }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+    -ms-transform: translateX(0rem);
+    transform: translateX(0rem);
+    border-bottom: 4px solid #000; } }
+
+/*animation class for elems that will animte up from the bottom*/
+.slideInUp {
+  animation: slideInUp .8s ease-out; }
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40rem);
+    -ms-transform: translateY(40rem);
+    transform: translateY(40rem); }
+  80% {
+    -webkit-transform: translateY(5rem);
+    -ms-transform: translateY(5rem);
+    transform: translateY(5rem); }
+  94% { }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0rem);
+    -ms-transform: translateY(0rem);
+    transform: translateY(0rem); } }
