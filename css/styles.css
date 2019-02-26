@@ -587,9 +587,9 @@ section {
         cursor: pointer; }
         section div.base_proj div.zidx_move div.proj_btn:hover {
           width: 50%; }
-          section div.base_proj div.zidx_move div.proj_btn:hover .proj_link {
+          section div.base_proj div.zidx_move div.proj_btn:hover a.proj_link {
             padding: .5rem; }
-        section div.base_proj div.zidx_move div.proj_btn .proj_link {
+        section div.base_proj div.zidx_move div.proj_btn a.proj_link {
           display: inline-block;
           color: #fff;
           padding: .2rem;
