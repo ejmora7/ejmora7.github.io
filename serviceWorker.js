@@ -33,7 +33,7 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('activate', function(event) {
-  var cacheKeeplist = ['v2'];
+  var cacheKeeplist = ['v3'];
 
   event.waitUntil(
     caches.keys().then(function(keyList) {
