@@ -16,7 +16,7 @@ self.addEventListener('install', function(event) {
         "/images/calculator.jpg",
         "/images/calendar.jpeg",
         "/images/detect.jpg",
-        "/images/dynamicbrail.jpg",
+        "/images/dynamicbrail.png",
         "/images/flicker.jpg",
         "/images/hooks.jpg",
         "/images/ifelse.jpg",
