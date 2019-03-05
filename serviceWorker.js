@@ -1,6 +1,6 @@
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('v3').then(function(cache) {
+    caches.open('v4').then(function(cache) {
       return cache.addAll([
         "/",
         "/index.html",
@@ -33,7 +33,7 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('activate', function(event) {
-  var cacheKeeplist = ['v3'];
+  var cacheKeeplist = ['v4'];
 
   event.waitUntil(
     caches.keys().then(function(keyList) {
