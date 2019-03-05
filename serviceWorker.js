@@ -5,6 +5,7 @@ self.addEventListener('install', function(event) {
         "/",
         "/index.html",
         "/css/styles.css",
+        "/assets/headervideo.mp4",
         "/images/append.jpg",
         "/images/ascending.png",
         "/images/brand.png",
@@ -21,7 +22,7 @@ self.addEventListener('install', function(event) {
         "/images/myphoto.jpg",
         "/images/restaurant.jpg",
         "/images/storage.jpg",
-        "/images/video1.jpg",
+        "/images/videoa1.jpg",
         "/images/zipcodeCity.jpeg",
         "/js/scripts.js"
       ]);
