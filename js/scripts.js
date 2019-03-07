@@ -208,12 +208,12 @@ window.onload = function(){
 	const submitButton = document.querySelector('input[name="submit"]');
 	console.log(nameInput.value);
 	console.log(emailInput.value);
-	console.log(textareaInput.value);
+	console.log(textareaInput);
 	
 	let inputData = [nameInput,emailInput,textareaInput];
 	submitButton.addEventListener("click",(e)=>{
 		for(let i=0;i<inputData.length;i++){
-			if(inputData[i] === ""){
+			if(inputData[i] === "Name"){
 			        e.preventDefault();
 				console.log("empty input");
 				alert("Please fill out the form.");
