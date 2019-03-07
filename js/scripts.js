@@ -177,21 +177,21 @@ window.onload = function(){
 	});  
 
 	//for email displayionh and link
-	const shownEmailHolder = document.getElementById("shownEmail");
+	//const shownEmailHolder = document.getElementById("shownEmail");
 	const emailLink = document.getElementById("emailsymbol");
 	const email = function(first,second,subject){
 		this.fhalf = first;
 		this.shalf = second;
 		this.subject = subject;
 	};
-	email.prototype.displayEmail = function (){
-		shownEmailHolder.innerHTML = this.fhalf + "@" + this.shalf;
-	}
+	//email.prototype.displayEmail = function (){
+		//shownEmailHolder.innerHTML = this.fhalf + "@" + this.shalf;
+	//}
 	email.prototype.setAttLink = function(){
 		emailLink.setAttribute("href", "mailto:"+this.fhalf+"@"+this.shalf+"?subject="+this.subject);
 	} 
 	let myEmail = new email("emora7","gmail.com","Hello, I'm reaching you from your portfolio site.");
-	myEmail.displayEmail();
+	//myEmail.displayEmail();
 	myEmail.setAttLink();
 
 
