@@ -222,25 +222,24 @@ window.onload = function(){
 			}
 		}
 		
-			let emailValue = emailInput.value;
-			let at_Symbol = emailValue.indexOf("@");
-			let dot_Symbol = emailValue.indexOf(".");
-			if(at_Symbol < 1){
-				e.preventDefault();
-				console.log('Please include an email with a valid "@" symbol');
-				emailInput.focus();
-				return false;
-			}else if(dot_Symbol <= at_Symbol +2){
-				e.preventDefault();
-				console.log('Please include an email adress. Ex. "example@email.com".')
-				emailInput.focus();
-				return false;
-			}else if(dot_Symbol >= emailValue.length -2){
-				console.log(dot_Symbol);
-				e.preventDefault();
-				console.log('Please include a valid email address. Ex. "youremail@email.com"');
-				emailInput.focus();
-				return false;
-			}
-		});
+		let emailValue = emailInput.value;
+		let at_Symbol = emailValue.indexOf("@");
+		let dot_Symbol = emailValue.indexOf(".");
+		if(at_Symbol < 1){
+			e.preventDefault();
+			alert('Please include an email with a valid "@" symbol');
+			emailInput.focus();
+			return false;
+		}else if(dot_Symbol <= at_Symbol +2){
+			e.preventDefault();
+			alert('Please include a valid email address. Ex. "example@email.com".')
+			emailInput.focus();
+			return false;
+		}else if(dot_Symbol >= emailValue.length -2){
+			e.preventDefault();
+			alert('Please include a valid email address. Ex. "youremail@email.com"');
+			emailInput.focus();
+			return false;
+		}
+	});
 };
