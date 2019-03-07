@@ -212,15 +212,14 @@ window.onload = function(){
 	
 	let inputData = [nameInput,emailInput,textareaInput];
 	submitButton.addEventListener("click",(e)=>{
-		for(let i=0;i<inputData.length;i++){
-			if(inputData[i] === "Name"){
+	        for(let i=0;i<inputData.length;i++){
+			if(inputData[i].value === ""){
 			        e.preventDefault();
 				console.log("empty input");
 				alert("Please fill out the form.");
 				inputData[i].focus();
 				return false;
 			}
-		
 		}
 		
 			let emailValue = emailInput.value;
@@ -233,12 +232,13 @@ window.onload = function(){
 				return false;
 			}else if(dot_Symbol <= at_Symbol +2){
 				e.preventDefault();
-				console.log('Please include an email with a valid Top Level Domain "example.com".')
+				console.log('Please include an email adress. Ex. "example@email.com".')
 				emailInput.focus();
 				return false;
 			}else if(dot_Symbol === emailValue.length -1){
+				console.log(dot_Symbol);
 				e.preventDefault();
-				console.log('Please include a valid email address. Ex. "youremail@toplevel.com"');
+				console.log('Please include a valid email address. Ex. "youremail@email.com"');
 				emailInput.focus();
 				return false;
 			}
