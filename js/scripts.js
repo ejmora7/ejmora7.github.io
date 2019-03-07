@@ -202,10 +202,10 @@ window.onload = function(){
 	const sectTitlesElems = [...sectTitles];
 	console.log(sectTitlesElems);
 	
-	const nameInput = document.querySelector('nput[type="name"]');
-	const emailInput = document.querySelector('nput[type="email"]');
-	const textareaInput = document.querySelector('nput[type="message"]');
-	const submitButton = document.querySelector('nput[type="submit"]');
+	const nameInput = document.querySelector('input[type="name"]');
+	const emailInput = document.querySelector('input[type="email"]');
+	const textareaInput = document.querySelector('input[type="message"]');
+	const submitButton = document.querySelector('input[type="submit"]');
 	
 	let inputData = [nameInput,emailInput,textareaInput];
 	submitButton.addEventListener("submit",(e)=>{
