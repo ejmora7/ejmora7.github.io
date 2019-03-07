@@ -208,9 +208,10 @@ window.onload = function(){
 	const submitButton = document.querySelector('input[type="submit"]');
 	
 	let inputData = [nameInput,emailInput,textareaInput];
-	submitButton.addEventListener("submit",(e)=>{
+	submitButton.addEventListener("click",(e)=>{
 	        inputData.fortEach((el)=>{
 			if(el === ""){
+				e.preventDefault();
 				console.log("empty input");
 				console.log("Please fill out the form");
 				el.focus();
@@ -221,14 +222,17 @@ window.onload = function(){
 			let at_Symbol = emailValue.indexOf("@");
 			let dot_Symbol = emailValue.indexOf(".");
 			if(at_Symbol < 1){
+				e.preventDefault();
 				console.log('Please include an email with a valid "@" symbol');
 				emailInput.focus();
 				return false;
 			}else if(dot_Symbol <= at_Symbol +2){
+				e.preventDefault();
 				console.log('Please include an email with a valid Top Level Domain "example.com".')
 				emailInput.focus();
 				return false;
 			}else if(dot_Symbol === emailValue.length -1){
+				e.preventDefault();
 				console.log('Please include a valid email address. Ex. "youremail@toplevel.com"');
 				emailInput.focus();
 				return false;
