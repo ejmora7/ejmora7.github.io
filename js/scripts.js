@@ -206,6 +206,9 @@ window.onload = function(){
 	const emailInput = document.querySelector('input[name="email"]');
 	const textareaInput = document.querySelector('input[name="message"]');
 	const submitButton = document.querySelector('input[name="submit"]');
+	console.log(nameInput.value);
+	console.log(emailInput.value);
+	console.log(textareaInput.value);
 	
 	let inputData = [nameInput,emailInput,textareaInput];
 	submitButton.addEventListener("click",(e)=>{
