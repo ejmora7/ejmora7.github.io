@@ -235,7 +235,7 @@ window.onload = function(){
 				console.log('Please include an email adress. Ex. "example@email.com".')
 				emailInput.focus();
 				return false;
-			}else if(dot_Symbol === emailValue.length -1){
+			}else if(dot_Symbol >= emailValue.length -2){
 				console.log(dot_Symbol);
 				e.preventDefault();
 				console.log('Please include a valid email address. Ex. "youremail@email.com"');
