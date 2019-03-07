@@ -209,15 +209,17 @@ window.onload = function(){
 	
 	let inputData = [nameInput,emailInput,textareaInput];
 	submitButton.addEventListener("click",(e)=>{
-	        inputData.fortEach((el)=>{
-			if(el === ""){
-				e.preventDefault();
+		for(let i=0;i<inputData.length;i++){
+			if(inputData[i] === ""){
+			        e.preventDefault();
 				console.log("empty input");
-				console.log("Please fill out the form");
-				el.focus();
+				alert("Please fill out the form.");
+				inputData[i].focus();
 				return false;
 			}
-			
+		
+		}
+		
 			let emailValue = emailInput.value;
 			let at_Symbol = emailValue.indexOf("@");
 			let dot_Symbol = emailValue.indexOf(".");
